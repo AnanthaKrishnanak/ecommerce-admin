@@ -15,7 +15,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           title="404"
           subTitle="Sorry, something went wrong."
           extra={
-            <Button type="primary" href={paths.home.getHref()}>
+            <Button type="primary" href={paths.dashboard.getHref()}>
               Back Home
             </Button>
           }
@@ -23,19 +23,9 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
       )}
     >
       <ConfigProvider
-        layout={{
-          style: {
-            backgroundColor: '#fff',
-          },
-        }}
         theme={{
-          token: {
-            colorBgContainer: '#fff',
-          },
           components: {
             Layout: {
-              colorBgHeader: '#fff',
-              colorBgLayout: '#fff',
               headerPadding: 0,
             },
             Typography: {
