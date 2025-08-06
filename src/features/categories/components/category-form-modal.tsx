@@ -5,6 +5,8 @@ import FormItem from 'antd/es/form/FormItem';
 import { useSaveCategory } from '../api/use-save-categories';
 import type { CategoryFormState } from '../schema/category-form-schema';
 
+const TextArea = Input.TextArea;
+
 interface CategoryFormModalProps {
   name?: string;
   action?: 'create' | 'update';
@@ -59,6 +61,9 @@ const CategoryFormModal: React.FC<CategoryFormModalProps> = ({
         >
           <FormItem name="name" rules={[{ required: true }]}>
             <Input placeholder="Category Name" />
+          </FormItem>
+          <FormItem name="description" rules={[{ required: true }]}>
+            <TextArea placeholder="Category Description" rows={4} />
           </FormItem>
         </Form>
       </Modal>

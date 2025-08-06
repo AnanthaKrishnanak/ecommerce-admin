@@ -15,6 +15,10 @@ const CategoryList = () => {
       dataIndex: 'name',
     },
     {
+      title: 'Description',
+      dataIndex: 'description',
+    },
+    {
       title: 'Action',
       width: 200,
       render: (_, record) => (

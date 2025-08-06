@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import { Button, Card } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 import ProductList from '../components/product-list';
@@ -8,17 +8,19 @@ const Products = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col gap-8">
-      <div className="flex justify-end">
-        <Button
-          type="primary"
-          onClick={() => navigate(paths.products.add.getHref())}
-        >
-          Add Product
-        </Button>
+    <Card>
+      <div className="flex flex-col gap-8">
+        <div className="flex justify-end">
+          <Button
+            type="primary"
+            onClick={() => navigate(paths.products.add.getHref())}
+          >
+            Add Product
+          </Button>
+        </div>
+        <ProductList />
       </div>
-      <ProductList />
-    </div>
+    </Card>
   );
 };
 

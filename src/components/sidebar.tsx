@@ -34,7 +34,11 @@ const Sidebar = () => {
   return (
     <>
       <div className="px-8 py-4">
-        <Typography.Title level={3} className="!text-white">
+        <Typography.Title
+          level={3}
+          className="!text-white cursor-pointer"
+          onClick={() => navigate(paths.dashboard.path)}
+        >
           ADMIN
         </Typography.Title>
       </div>
@@ -42,7 +46,7 @@ const Sidebar = () => {
         mode="inline"
         items={menuItems}
         theme="dark"
-        defaultSelectedKeys={['products']}
+        defaultSelectedKeys={['dashboard']}
         onClick={handleMenuClick}
       />
     </>
