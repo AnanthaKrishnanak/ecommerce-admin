@@ -1,11 +1,21 @@
 import { Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
 import ProductList from '../components/product-list';
+import { paths } from '@/config/paths';
 
 const Products = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col gap-8">
       <div className="flex justify-end">
-        <Button>Add Product</Button>
+        <Button
+          type="primary"
+          onClick={() => navigate(paths.products.add.getHref())}
+        >
+          Add Product
+        </Button>
       </div>
       <ProductList />
     </div>

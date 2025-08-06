@@ -5,6 +5,7 @@ import { paths } from '@/config/paths';
 import AppLayout from '@/components/layout';
 import Products from '@/features/products/route/products';
 import Dashboard from '@/features/dashboard/route/dashboard';
+import ProductForm from '@/features/products/components/product-form';
 
 const AppRouter = () => {
   const routes = createBrowserRouter([
@@ -19,6 +20,14 @@ const AppRouter = () => {
         {
           path: paths.products.path,
           element: <Products />,
+        },
+        {
+          path: paths.products.add.path,
+          element: <ProductForm />,
+        },
+        {
+          path: paths.products.edit.path,
+          element: <ProductForm />,
         },
         {
           path: paths.categories.path,
