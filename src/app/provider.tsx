@@ -1,4 +1,4 @@
-import { Button, ConfigProvider, Result } from 'antd';
+import { App, Button, ConfigProvider, Result } from 'antd';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
 
@@ -35,9 +35,11 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
           },
         }}
       >
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
+        <App>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </App>
       </ConfigProvider>
     </ErrorBoundary>
   );

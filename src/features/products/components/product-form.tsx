@@ -221,6 +221,14 @@ const ProductForm = () => {
           <Switch />
         </Form.Item>
 
+        <Form.Item label="Tags" name="tags">
+          <Select
+            mode="tags"
+            placeholder="Enter tags"
+            style={{ width: '100%' }}
+          />
+        </Form.Item>
+
         <Form.Item>
           <Button
             type="primary"

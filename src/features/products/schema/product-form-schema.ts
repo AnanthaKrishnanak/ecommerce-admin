@@ -11,6 +11,7 @@ export const productFormSchema = z.object({
   rating: z.number().min(0).max(5),
   reviewCount: z.number(),
   productImageUrl: z.optional(z.string()),
+  tags: z.array(z.string()),
 });
 
 export type ProductFormState = z.infer<typeof productFormSchema>;

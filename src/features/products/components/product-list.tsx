@@ -44,6 +44,7 @@ const ProductList = () => {
       columns={columns}
       dataSource={data}
       loading={isLoading}
+      scroll={{x:'fit-content'}}
       pagination={{ pageSize: 10 }}
     />
   );
